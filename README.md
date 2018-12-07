@@ -34,10 +34,10 @@ If you wish to make this jar yourself just run:
 lein uberjar
 ```
 
-It will save the standalone jar to ./target
+It will save the standalone jar to ./target/
 
 ## Tests
-To run the tests found in ./tests: 
+To run the tests found in ./tests/: 
 ```
 lein test
 ``` 

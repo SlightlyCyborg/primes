@@ -1,6 +1,6 @@
 (ns funding-circle.primes-test
-  (:use [clojure.test :as test]
-        [funding-circle.primes :as primes]))
+  (:use [clojure.test])
+  (:require [funding-circle.primes :as primes]))
 
 
 (deftest test-divides-evenly?
@@ -9,8 +9,8 @@
 
 
 (deftest test-divides-evenly-by-any?
-  (is (divides-evenly-by-any? 3 [1 2 3]))
-  (is (not (divides-evenly-by-any? 3 [6 4 5]))))
+  (is (primes/divides-evenly-by-any? 3 [1 2 3]))
+  (is (not (primes/divides-evenly-by-any? 3 [6 4 5]))))
 
 
 (deftest test-get-next-prime
@@ -23,4 +23,4 @@
 
 
 (deftest test-gen-next-prime
-  (is (= (take 10 (gen-primes)) '(2 3 5 7 11 13 17 19 23 29))))
+  (is (= (take 10 (primes/gen-primes)) '(2 3 5 7 11 13 17 19 23 29))))

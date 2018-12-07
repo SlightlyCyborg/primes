@@ -14,7 +14,7 @@
 (defn divides-evenly-by-any?
   "returns true if dividend is divided evenly by any of the divisors"
   [dividend divisors]
-  (reduce #(or %1 (dividesEvenly? dividend %2)) 
+  (reduce #(or %1 (divides-evenly? dividend %2)) 
           false
           divisors))
 

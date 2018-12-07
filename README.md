@@ -1,9 +1,25 @@
 # Funding Circle Skills Test in Clojure
 
+## API
+Generating primes uses lazy-seqs
+```
+(take 10 (gen-primes))
+```
+
 ## Using lein
+To run with default 10 primes
 ```
 lein run
 ```
+
+or
+
+```
+lein run 15
+```
+
+for more or less
+
 
 ## Using assembled jar
 I made an uberjar called `run.jar` for you to run if you do not have leiningen

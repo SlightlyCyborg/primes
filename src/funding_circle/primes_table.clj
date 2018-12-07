@@ -34,5 +34,10 @@
      n-primes)))
 
 (defn -main [& args]
-  (print-n-primes-mult-table 10)
+  (cond 
+    (= (count args) 1) (let [n (read-string (first args))]
+                         (if (not (int? n))
+                           (throw (Exception. "Arg must be int"))
+                           (print-n-primes-mult-table n)))
+  :else (print-n-primes-mult-table 10))
   (flush))
